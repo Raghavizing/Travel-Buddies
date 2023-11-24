@@ -1,0 +1,29 @@
+.headerBody{
+    height: 100vh;
+}
+.headerContent{
+    padding: 15% 0;
+}
+.textLine1 {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.textLine2 {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.typedText{
+    border-bottom: 4px solid #30c7ec
+}
+.headerBackground{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.carousalImg{
+    height: 100vh;
+    width: 100%;
+}
