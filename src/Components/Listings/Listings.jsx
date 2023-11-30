@@ -10,7 +10,7 @@ import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
 import {faClipboardList} from '@fortawesome/free-solid-svg-icons'
 function Card(props) {
     return (
-        <div className="card shadow col-lg-3 col-md-5 col-10 mx-3 my-2 rounded-2 text-left p-0" data-aos="fade-up">
+        <div className="card shadow col-lg-3 col-md-5 col-10 mx-3 my-2 rounded-2 text-left p-0 listing-card" data-aos="fade-up">
             <img src={props.image} className="card-img-top listing-card-img" alt="..." />
             <div className="card-body listing-card-body">
                 <div className="listing-card-header">

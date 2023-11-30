@@ -1,32 +1,39 @@
-.listingTitle{
+.listingTitle {
     font-size: 20px;
     font-weight: bold;
 }
-.listingTitleUnderline{
+
+.listingTitleUnderline {
     border-bottom: 4px solid #30c7ec
 }
-.listing-card-name{
+
+.listing-card-name {
     font-weight: bold;
     font-size: 20px;
     color: black !important;
 }
-.listing-card-details{
+
+.listing-card-details {
     border-top: 1px solid darkgray;
     border-bottom: 1px solid darkgray;
 }
-.listing-card-body{
+
+.listing-card-body {
     font-weight: 300;
     font-size: 16px;
     color: darkgray !important;
 }
-.listing-card-price{
+
+.listing-card-price {
     font-weight: bold;
     font-size: 18px;
     color: black !important;
 }
-.listing-card-img{
+
+.listing-card-img {
     height: 40%;
 }
-.listing-btn{
+
+.listing-btn {
     background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
 }

@@ -1,4 +1,6 @@
 .Form-btn{
+    position: relative;
+    top: 20px;
     background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
 }
 .btn-text{
@@ -6,6 +8,19 @@
     text-transform: uppercase;
 }
 .headerForm{
-    background-color: transparent;
-    color: white;
+    background-color: rgb(255,255,255,0.5);
 }
+
+.headerForm ::placeholder {
+    color: black !important;
+    opacity: 1 !important; /* Firefox */
+  }
+
+.headerForm .form-control{
+    background-color: rgb(255,255,255,0.5);
+    border: none;
+}
+.headerForm input[type=range]::-webkit-slider-runnable-track  {
+    background: rgb(0,0,0,0.1);
+    border-radius: 10px;
+  }

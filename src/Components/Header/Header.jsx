@@ -2,12 +2,9 @@ import React from "react";
 import "./Header.css"
 import Typed from 'react-typed';
 import Form from "./Form/Form";
-import img1 from "../Images/beach.jpeg"
-import img2 from "../Images/mountain.jpeg"
-import img3 from "../Images/vacation.jpeg"
 let i = 0;
 function returnUrl() {
-    const imageUrl = ["/src/Images/vacation.jpeg", "/src/Images/beach.jpeg", "/src/Images/mountain.jpeg"]
+    const imageUrl = ["./Images/Home/1.jpeg", "./Images/Home/2.jpeg", "./Images/Home/3.jpeg", "./Images/Home/4.jpeg", "./Images/Home/5.jpeg"]
     let url = imageUrl[i];
     console.log('url("' + url + '")')
     return 'url("' + url + '")'
@@ -18,13 +15,19 @@ const Header = () => {
             <div id="carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src={img1} className="d-block carousalImg" alt="..." />
+                        <img src="./Images/Home/1.jpeg" className="d-block carousalImg" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={img2} className="d-block carousalImg" alt="..." />
+                        <img src="./Images/Home/2.jpeg" className="d-block carousalImg" alt="..." />
                     </div>
                     <div className="carousel-item">
-                        <img src={img3} className="d-block carousalImg" alt="..." />
+                        <img src="./Images/Home/3.jpeg" className="d-block carousalImg" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="./Images/Home/4.jpeg" className="d-block carousalImg" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="./Images/Home/5.jpeg" className="d-block carousalImg" alt="..." />
                     </div>
                 </div>
             </div>
@@ -33,7 +36,7 @@ const Header = () => {
             <div className="my-4 row">
                 <span className="textLine1 d-block col-11 ms-auto">Our Packages</span>
                 <span className="textLine2 d-block col-11 ms-auto">Search Your <Typed className="typedText"
-                    strings={['Perfect destination.', 'Next adventure.', 'Dream getaway.', 'Travel bliss.']}
+                    strings={['Perfect Destination.', 'Next Adventure.', 'Dream Getaway.', 'Travel Bliss.']}
                     typeSpeed={60} backSpeed={60} loop
                 /></span>
             </div>
