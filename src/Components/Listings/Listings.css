@@ -35,5 +35,11 @@
 }
 
 .listing-btn {
-    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+}
+.modalClose{
+    text-align: right;
+    color: red;
+    cursor: pointer;
 }

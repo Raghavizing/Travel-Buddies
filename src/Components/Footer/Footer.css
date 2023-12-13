@@ -1,0 +1,62 @@
+.footer {
+    background-image: url("/public/Images/Footer/beach.jpeg");
+}
+
+.headerText1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: #000 1px 0 5px;
+    color: white;
+}
+
+.headerText2 {
+    font-size: 26px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: #000 1px 0 5px;
+}
+
+.footerBody {
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+}
+.footerBodyContent{
+    padding: 0 5%;
+}
+
+.footerBodyText {
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.footerLink {
+    color: black
+}
+
+.footerBtn {
+
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    color: white !important;
+}
+
+.footerList li {
+    font-weight: lighter;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+.footerList li:hover {
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+.listHeader {
+    font-weight: bold;
+}
+
+.footerTrademark {
+    background-color: #26a0da;
+    border-radius: 0px 0px 20px 20px;
+}

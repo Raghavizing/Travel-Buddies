@@ -1,5 +1,15 @@
 .hotelModal{
+    position: fixed;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+.hotelModalBody{
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
     margin: 0 25%;
     padding: 5%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
 }

@@ -43,7 +43,7 @@ const Listing = () => {
         <div className="row d-flex justify-content-center" >
             {Hotel.map(createCard)}
         </div>
-        {openModal && <HotelModal />}
+        <HotelModal show={openModal} closeModal={setOpenModal}/>
     </div>)
 }
 export default Listing

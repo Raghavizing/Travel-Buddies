@@ -1,9 +1,10 @@
 import React from "react";
 import "./hotelModal.css"
-const hotelModal = () => {
+const hotelModal = (props) => {
     return (
-        <div className="hotelModal">
-            <div>
+        <div className={`hotelModal ${props.show ? '' : "d-none"}`}>
+            <div className="hotelModalBody">
+                <div onClick={()=>{props.closeModal(false)}} className="modalClose">X</div>
                 <p>Reservations</p>
                 <p>Request a reservation. We will come back to you shortly.</p>
                 <form>

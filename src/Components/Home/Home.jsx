@@ -1,15 +1,14 @@
 import React from "react";
-import "./Header.css"
+import "./Home.css"
 import Typed from 'react-typed';
 import Form from "./Form/Form";
 let i = 0;
 function returnUrl() {
     const imageUrl = ["./Images/Home/1.jpeg", "./Images/Home/2.jpeg", "./Images/Home/3.jpeg", "./Images/Home/4.jpeg", "./Images/Home/5.jpeg"]
     let url = imageUrl[i];
-    console.log('url("' + url + '")')
     return 'url("' + url + '")'
 }
-const Header = () => {
+const Home = () => {
     return (<div className="headerBody">
         <div className="headerBackground">
             <div id="carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -44,4 +43,4 @@ const Header = () => {
         </div>
     </div>)
 }
-export default Header
+export default Home

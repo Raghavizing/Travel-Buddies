@@ -12,10 +12,10 @@ const Navbar = () => {
                     <div className="col-8">
                     <ul className="navbar-nav d-flex justify-content-center">
                         <li className="nav-item mx-2">
-                            <a className="nav-link" href="#">Home</a>
+                            <a className="nav-link" href="/">Home</a>
                         </li>
                         <li className="nav-item mx-2">
-                            <a className="nav-link" href="#">Packages</a>
+                            <a className="nav-link" href="/Packages">Packages</a>
                         </li>
                         <li className="nav-item mx-2">
                             <a className="nav-link" href="#">Shop</a>
