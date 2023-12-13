@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Listing from "./Listings/Listings";
 import Footer from "./Footer/Footer";
-import { BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
     return (<div className="">

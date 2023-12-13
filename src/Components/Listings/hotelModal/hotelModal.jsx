@@ -1,10 +1,15 @@
 import React from "react";
 import "./hotelModal.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 const hotelModal = (props) => {
     return (
         <div className={`hotelModal ${props.show ? '' : "d-none"}`}>
             <div className="hotelModalBody">
-                <div onClick={()=>{props.closeModal(false)}} className="modalClose">X</div>
+                <div onClick={() => { props.closeModal(false) }} className="modalClose"><FontAwesomeIcon icon={faXmark} size="xl" /></div>
+                <div className="d-flex"><p className="hotelNameModal">{props.name}</p></div>
+                <p className="hotelLocationModal"><FontAwesomeIcon icon={faLocationDot} style={{ color: "#ffd700", }} /> {props.location}</p>
                 <p>Reservations</p>
                 <p>Request a reservation. We will come back to you shortly.</p>
                 <form>
@@ -47,7 +52,6 @@ const hotelModal = (props) => {
                     </div>
                     <button type="submit" className="btn btn-primary mx-auto">Book Reservation</button>
                 </form>
-
             </div>
         </div>
     )

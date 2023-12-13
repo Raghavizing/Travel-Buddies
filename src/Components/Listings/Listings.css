@@ -1,5 +1,5 @@
 .listingTitle {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
 }
 
@@ -38,7 +38,8 @@
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
 }
-.modalClose{
+
+.modalClose {
     text-align: right;
     color: red;
     cursor: pointer;

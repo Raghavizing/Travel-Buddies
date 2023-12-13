@@ -3,14 +3,19 @@
     border-bottom: 2px solid transparent;
 
 }
+
 @media screen and (min-width:992px) {
-    .nav-item a:hover,.nav-item a:active {
+    .nav-item a:hover {
         border-bottom: 2px solid black;
-    
+
+    }
+
+    .nav-item a:active {
+        border-bottom: 2px solid black;
     }
 }
 
-.nav-sticky{
+.nav-sticky {
     position: sticky !important;
     top: 0;
     background-color: white;
@@ -21,7 +26,8 @@
     font-size: 25px;
     font-weight: bolder;
 }
-.navbar-btn{
+
+.navbar-btn {
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
 }
