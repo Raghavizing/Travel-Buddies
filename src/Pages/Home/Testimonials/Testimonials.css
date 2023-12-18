@@ -1,0 +1,42 @@
+.testimonials {
+    height: 100vh;
+    background-color: white;
+    padding: 5% 10%;
+    background-color: rgba(233, 240, 255, 0.5);
+}
+
+.carousel-img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+
+.carousel-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.userCarousel {
+    margin: 5%;
+    padding: 5%;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: ease-in-out 0.2s;
+}
+
+.userCarousel:hover {
+    transform: scale(1.04);
+}
+
+.testimonials-header {
+    font-size: 26px;
+}
+
+.user-details1 {
+    font-size: 20px;
+}
+
+.user-details2 {
+    font-size: 18px;
+}

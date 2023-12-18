@@ -1,0 +1,31 @@
+.imgGall {
+    height: 100vh;
+}
+.imageGallHeading{
+    font-size: 26px;
+}
+.imgGallBtns{
+    margin-top: 5%;
+}
+
+.imgGallBtn {
+    border: 1px solid #26a0da;
+    width: 10%;
+    border-radius: 20px;
+    transition: ease-in 0.2s;
+}
+
+.imgGallBtn:hover {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    color: white;
+    transform: scale(1.1);
+}
+
+.activeGallBtn {
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
+    background-size: 200% auto;
+    color: white;
+    transform: scale(1.1);
+
+}

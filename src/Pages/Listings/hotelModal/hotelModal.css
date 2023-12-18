@@ -1,0 +1,39 @@
+.hotelModalBackground {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+.hotelModal {
+    background-color: white;
+    padding: 2%;
+    margin: 0 25%;
+    margin-top: 5%;
+    border-radius: 20px;
+}
+
+.hotelModalBody {
+    padding: 5%;
+}
+
+.hotelNameModal {
+    font-size: 24px;
+}
+
+.hotelPriceModal {
+    font-size: 22px;
+}
+
+.modalHotelDetails {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 2% 0;
+    margin-bottom: 2%;
+}
+
+.modalText1 {
+    font-size: 20px;
+}

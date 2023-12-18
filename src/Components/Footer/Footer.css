@@ -4,14 +4,12 @@
 
 .headerText1 {
     font-size: 24px;
-    font-weight: bold;
     text-shadow: #000 1px 0 5px;
     color: white;
 }
 
 .headerText2 {
     font-size: 26px;
-    font-weight: bolder;
     color: white;
     text-shadow: #000 1px 0 5px;
 }
@@ -28,7 +26,6 @@
 
 .footerBodyText {
     font-size: 14px;
-    font-weight: lighter;
 }
 
 .footerLink {
@@ -43,18 +40,12 @@
 }
 
 .footerList li {
-    font-weight: lighter;
     margin-bottom: 5%;
     cursor: pointer;
 }
 
 .footerList li:hover {
     text-decoration: underline;
-    font-weight: normal;
-}
-
-.listHeader {
-    font-weight: bold;
 }
 
 .footerTrademark {

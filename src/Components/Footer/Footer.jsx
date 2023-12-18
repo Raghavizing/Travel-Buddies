@@ -12,10 +12,10 @@ function Footer() {
         <div className='footer py-4'>
             <div className='d-flex justify-content-center footerHead py-5'>
                 <div className='mx-4'>
-                    <div className='headerText1'>
+                    <div className='headerText1 heading-text'>
                         Keep In Touch
                     </div>
-                    <div className='headerText2'>
+                    <div className='headerText2 heading-text'>
                         Travel With Us
                     </div>
                 </div>
@@ -23,14 +23,14 @@ function Footer() {
                     <input className="form-control rounded-5" type="email" placeholder='Enter Your Email.' />
                 </div>
                 <div className='mx-1 my-auto'>
-                    <button className='btn footerBtn rounded-5'><span className='mx-1'>Send</span> <FontAwesomeIcon icon={faPaperPlane} /></button>
+                    <button className='btn footerBtn rounded-5'><span className='mx-1 paragraph-text'>Send</span> <FontAwesomeIcon icon={faPaperPlane} /></button>
                 </div>
             </div>
             <div className='footerBody mx-auto pt-2'>
                 <div className='row footerBodyContent'>
                     <div className='col-6'>
-                        <div className='d-flex my-2'><FontAwesomeIcon icon={faEarthAmericas} style={{ color: "#30c7ec", }} className="my-auto me-1" /><div className="brand-name">Travel.</div></div>
-                        <p className='footerBodyText'>Embark on unforgettable adventures with us. Discover exotic destinations, create lasting memories, and let our expert guides enhance your journey. Explore the world with confidence, knowing your wanderlust is in capable hands. Your dream getaway begins here. Bon voyage!</p>
+                        <div className='d-flex my-2'><FontAwesomeIcon icon={faEarthAmericas} style={{ color: "#30c7ec", }} className="my-auto me-1" /><div className="brand-name heading-text">Travel.</div></div>
+                        <p className='footerBodyText paragraph-text'>Embark on unforgettable adventures with us. Discover exotic destinations, create lasting memories, and let our expert guides enhance your journey. Explore the world with confidence, knowing your wanderlust is in capable hands. Your dream getaway begins here. Bon voyage!</p>
                         <div className='my-2'>
                             <a href="https://www.instagram.com" className='footerLink me-2'><FontAwesomeIcon icon={faInstagram} size='xl' /></a>
                             <a href="https://www.twitter.com" className='footerLink mx-2'><FontAwesomeIcon icon={faXTwitter} size='xl' /></a>
@@ -39,8 +39,8 @@ function Footer() {
                         </div>
                     </div>
                     <div className='col-2 my-2'>
-                        <div className='listHeader mb-2'>Our Agency</div>
-                        <ul className='footerList'>
+                        <div className='listHeader mb-2 subheading-text'>Our Agency</div>
+                        <ul className='footerList paragraph-text'>
                             <li>Services</li>
                             <li>Insaurance</li>
                             <li>Booking</li>
@@ -50,8 +50,8 @@ function Footer() {
                         </ul>
                     </div>
                     <div className='col-2 my-2'>
-                        <div className='listHeader mb-2'>Partners</div>
-                        <ul className='footerList'>
+                        <div className='listHeader mb-2 subheading-text'>Partners</div>
+                        <ul className='footerList paragraph-text'>
                             <li>Booking</li>
                             <li>RentalCar</li>
                             <li>HostelWorld</li>
@@ -61,7 +61,7 @@ function Footer() {
                         </ul>
                     </div>
                     <div className='col-2 my-2'>
-                        <div className='listHeader mb-2'>Last Minute</div>
+                        <div className='listHeader mb-2 subheading-text'>Last Minute</div>
                         <ul className='footerList'>
                             <li>London</li>
                             <li>Calafornia</li>
@@ -71,9 +71,9 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
-                <div className='d-flex justify-content-around footerTrademark'>
-                    <div>Best Travel Website</div>
-                    <div>Developed By Raghav Chaturvedi</div>
+                <div className='d-flex justify-content-around footerTrademark py-2'>
+                    <div className='heading-text'>Best Travel Website</div>
+                    <div className='heading-text'>Developed By Raghav Chaturvedi</div>
                 </div>
             </div>
         </div>

@@ -2,16 +2,11 @@ import React from "react";
 import "./Home.css"
 import Typed from 'react-typed';
 import Form from "./Form/Form";
-let i = 0;
-function returnUrl() {
-    const imageUrl = ["./Images/Home/1.jpeg", "./Images/Home/2.jpeg", "./Images/Home/3.jpeg", "./Images/Home/4.jpeg", "./Images/Home/5.jpeg"]
-    let url = imageUrl[i];
-    return 'url("' + url + '")'
-}
+import Testimonials from "./Testimonials/Testimonials";
 const Home = () => {
-    return (<div className="headerBody">
+    return (<div><div className="headerBody p-0">
         <div className="headerBackground">
-            <div id="carousel" className="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div id="carousel" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src="./Images/Home/1.jpeg" className="d-block carousalImg" alt="..." />
@@ -33,14 +28,16 @@ const Home = () => {
         </div>
         <div className="headerContent">
             <div className="my-4 row">
-                <span className="textLine1 d-block col-11 ms-auto">Our Packages</span>
-                <span className="textLine2 d-block col-11 ms-auto">Search Your <Typed className="typedText"
+                <span className="textLine1 d-block col-11 ms-auto heading-text">Our Packages</span>
+                <span className="textLine2 d-block col-11 ms-auto heading-text">Search Your <Typed className="typedText"
                     strings={['Perfect Destination.', 'Next Adventure.', 'Dream Getaway.', 'Travel Bliss.']}
                     typeSpeed={60} backSpeed={60} loop
                 /></span>
             </div>
             <Form />
         </div>
+    </div>
+        <Testimonials />
     </div>)
 }
 export default Home
