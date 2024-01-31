@@ -12,16 +12,10 @@ const App = () => {
         <Navbar />
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' Component={Home} />
-            </Routes>
-            <Routes>
-                <Route path='/Hotels' Component={Listing} />
-            </Routes>
-            <Routes>
-                <Route path='/Packages' Component={Packages} />
-            </Routes>
-            <Routes>
-                <Route path='/Gallery' Component={Gallery} />
+                <Route path='/' element={<Home />} />
+                <Route path='/Hotels' element={<Listing />} />
+                <Route path='/Packages' element={<Packages />} />
+                <Route path='/Gallery' element={<Gallery />} />
             </Routes>
         </BrowserRouter>
         <Footer />

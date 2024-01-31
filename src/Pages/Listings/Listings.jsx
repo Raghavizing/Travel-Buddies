@@ -11,10 +11,7 @@ import { faClipboardList } from '@fortawesome/free-solid-svg-icons'
 import HotelModal from "./hotelModal/hotelModal";
 const Listing = () => {
     const [openModal, setOpenModal] = useState(false);
-    const [hotelName, setHotelName] = useState('');
-    const [hotelLocation, setHotelLocation] = useState('');
-    const [hotelPrice, setHotelPrice] = useState('');
-    const [hotelRating, setHotelRating] = useState('');
+    const [hotelId, setHotelId] = useState('');
     useEffect(() => {
 
         document.body.style.overflow = (openModal) ? "hidden" : ''
@@ -24,7 +21,7 @@ const Listing = () => {
     }, [])
     function createCard(props) {
         return (
-            <Card key={props.id} image={props.image} name={props.name} location={props.location} price={props.price} rating={props.rating} description={props.description} />
+            <Card key={props.id} id={props.id} image={props.image} name={props.name} location={props.location} price={props.price} rating={props.rating} description={props.description} />
         )
     }
     function Card(props) {
@@ -42,7 +39,7 @@ const Listing = () => {
                     </div>
                     <div className="card-text paragraph-text">{props.description}</div>
                 </div>
-                <button className="btn listing-btn text-white px-3 rounded-4 mb-4 ms-2 col-4" onClick={() => { setOpenModal(true); setHotelName(props.name); setHotelLocation(props.location); setHotelRating(props.rating); setHotelPrice(props.price); }}> <div className="d-flex paragraph-text"> Details  <FontAwesomeIcon icon={faClipboardList} style={{ color: "#ffffff", }} className="my-auto ms-auto" /></div></button>
+                <button className="btn listing-btn text-white px-3 rounded-4 mb-4 ms-2 col-4" onClick={() => { setOpenModal(true); setHotelId(props.id); }}> <div className="d-flex paragraph-text"> Details  <FontAwesomeIcon icon={faClipboardList} style={{ color: "#ffffff", }} className="my-auto ms-auto" /></div></button>
             </div>
         )
     }
@@ -51,7 +48,7 @@ const Listing = () => {
         <div className="row d-flex justify-content-center py-2" >
             {Hotel.map(createCard)}
         </div>
-        <HotelModal show={openModal} name={hotelName} location={hotelLocation} price={hotelPrice} rating={hotelRating} closeModal={setOpenModal} />
+        <HotelModal show={openModal} id={hotelId} closeModal={setOpenModal} />
     </div>)
 }
 export default Listing

@@ -1,11 +1,13 @@
 .imgGall {
-    height: 100vh;
+    background-color: rgba(233, 240, 255, 0.5);
 }
-.imageGallHeading{
+
+.imageGallHeading {
     font-size: 26px;
 }
-.imgGallBtns{
-    margin-top: 5%;
+
+.imgGallBtns {
+    margin-top: 4%;
 }
 
 .imgGallBtn {
@@ -28,4 +30,21 @@
     color: white;
     transform: scale(1.1);
 
+}
+
+.galImages {
+    padding: 5%;
+    padding-top: 2%;
+}
+
+.gallImg {
+    height: 250px;
+    width: 380px;
+    transition: ease-in 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+}
+
+.gallImg:hover {
+    transform: scale(1.05);
 }
