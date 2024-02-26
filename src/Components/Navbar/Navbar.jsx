@@ -32,8 +32,8 @@ const Navbar = () => {
                             <li className="nav-item mx-2">
                                 <a className="nav-link" href="/Contact">Contact</a>
                             </li>
-                            <li className="nav-item my-auto">
-                                <button className="btn navbar-btn text-white px-3 rounded-4">Book Now</button>
+                            <li className="my-auto">
+                                <button className="btn navbar-btn px-3 rounded-4" ><a className="text-white" style={{textDecoration:"none"}} href="/Login">Login</a></button>
                             </li>
                         </ul>
                     </div>

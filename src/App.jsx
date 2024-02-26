@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import Packages from "./Pages/Packages/Packages";
 import Gallery from "./Pages/Gallery/Gallery";
+import Login from "./Pages/Login/Login";
 
 const App = () => {
     return (<div className="">
@@ -16,6 +17,7 @@ const App = () => {
                 <Route path='/Hotels' element={<Listing />} />
                 <Route path='/Packages' element={<Packages />} />
                 <Route path='/Gallery' element={<Gallery />} />
+                <Route path='/Login' element={<Login />} />
             </Routes>
         </BrowserRouter>
         <Footer />
