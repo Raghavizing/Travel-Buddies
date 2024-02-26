@@ -3,10 +3,22 @@ import "./Login.css"
 function Login() {
     const [formType, setFormType] = useState("login");
     const [validation, setValidation] = useState({
-        nameVal: false,
-        passwordVal: false,
-        passMatchval: false,
-        emailVal: false
+        nameVal:{
+            isValid:true,
+            message:""
+        },
+        passVal:{
+            isValid:true,
+            message:""
+        },
+        passMatchval:{
+            isValid:true,
+            message:""
+        },
+        emailVal:{
+            isValid:true,
+            message:""
+        },
 
     })
     const [contact, updateContact] = useState({
@@ -31,16 +43,46 @@ function Login() {
     }
     function submitForm(event) {
         let isValid = true;
+        if (contact.pass.length === 0) {
+            setValidation({
+                ...validation,
+                passVal:{
+                    isValid:false,
+                    message:"Field cannot be empty."
+                }
+            })
+            isValid = false;
+        }
+        if (contact.email.length === 0) {
+            setValidation({
+                ...validation,
+                emailVal:{
+                    isValid:false,
+                    message:"Field cannot be empty."
+                }
+            })
+            isValid = false;
+        }
         if (formType === "sign up") {
             if (contact.name.length == 0) {
-                validation.nameVal = true;
+                setValidation({
+                    ...validation,
+                    name:{
+                        isValid:false,
+                        message:"Field cannot be empty."
+                    }
+                })
                 isValid = false;
             }
-            if (contact.name === "") {
-                validation.nameVal = true;
-            }
             if (contact.pass != contact.repass) {
-                validation.passMatchval = true;
+                setValidation({
+                    ...validation,
+                    passMatchval:{
+                        isValid:false,
+                        message:"Passwords donot match."
+                    }
+                })
+                isValid = false;
             }
 
         }
@@ -52,13 +94,25 @@ function Login() {
             repass: ""
         })
         setValidation({
-            nameVal: false,
-            passwordVal: false,
-            passMatchval: false,
-            emailVal: false
+            nameVal:{
+                isValid:true,
+                message:""
+            },
+            passVal:{
+                isValid:true,
+                message:""
+            },
+            passMatchval:{
+                isValid:true,
+                message:""
+            },
+            emailVal:{
+                isValid:true,
+                message:""
+            },
         })
-        event.preventDefault();
     }
+    event.preventDefault();
     }
     return (
         <div style={{ height: "100vh" }}>
@@ -66,20 +120,20 @@ function Login() {
                 <div className='heading-text text-center h3 my-2 text-capitalize'>{formType}</div>
                 <form className="mb-3">
                     <div className="mb-3" hidden={formType === "login" ? true : false}>
-                        <label htmlFor="name" className="form-label d-flex justify-content-between">Full Name <p className='validationMessage my-auto' hidden={!validation.nameVal}>* Name cannot be empty.</p></label>
+                        <label htmlFor="name" className="form-label d-flex justify-content-between">Full Name <p className='validationMessage my-auto' hidden={validation.nameVal.isValid}>* {validation.nameVal.message}</p></label>
                         <input name="name" type="name" className="form-control" id="name" value={contact.name} onChange={handleFormChange} />
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="email" className="form-label d-flex justify-content-between">Email address <p className='validationMessage my-auto' hidden={!validation.emailVal}>* Invalid email.</p></label>
+                        <label htmlFor="email" className="form-label d-flex justify-content-between">Email address <p className='validationMessage my-auto' hidden={validation.emailVal.isValid}>* {validation.emailVal.message}</p></label>
                         <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" value={contact.email} onChange={handleFormChange} />
                         <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="pass" className="form-label d-flex justify-content-between">Password <p className='validationMessage my-auto' hidden={!validation.passval}>* Password must be greater than 8 characters and must not contain special characters.</p></label>
+                        <label htmlFor="pass" className="form-label d-flex justify-content-between">Password <p className='validationMessage my-auto' hidden={validation.passVal.isValid}>* {validation.passVal.message}.</p></label>
                         <input name="pass" type="password" className="form-control" id="pass" value={contact.pass} onChange={handleFormChange} />
                     </div>
                     <div className="mb-3" hidden={formType === "login" ? true : false}>
-                        <label htmlFor="repass" className="form-label d-flex justify-content-between">Repeat Password <p className='validationMessage my-auto' hidden={!validation.passMatchval}>* passwords donot match.</p></label>
+                        <label htmlFor="repass" className="form-label d-flex justify-content-between">Repeat Password <p className='validationMessage my-auto' hidden={validation.passMatchval.isValid}>* {validation.passMatchval.message}</p></label>
                         <input name="repass" type="password" className="form-control" id="repass" value={contact.repass} onChange={handleFormChange} />
                     </div>
                     <div className='text-center'><button className="btn btn-primary w-50 mt-4 text-capitalize" onClick={submitForm}>{formType}</button></div>

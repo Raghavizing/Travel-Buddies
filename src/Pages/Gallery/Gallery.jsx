@@ -8,7 +8,7 @@ const destinations = ["/Images/Gallery/Destinations/1.jpeg", "./Images/Gallery/D
 const adventure = ["/Images/Gallery/Adventure/1.jpeg", "./Images/Gallery/Adventure/2.jpeg", "./Images/Gallery/Adventure/3.jpeg", "/Images/Gallery/Adventure/4.jpeg", "./Images/Gallery/Adventure/5.jpeg", "/Images/Gallery/Adventure/6.jpeg"]
 const culture = ["/Images/Gallery/Culture/1.jpeg", "./Images/Gallery/Culture/2.jpeg", "./Images/Gallery/Culture/3.jpeg", "/Images/Gallery/Culture/4.jpeg", "./Images/Gallery/Culture/5.jpeg", "/Images/Gallery/Culture/6.jpeg"]
 const cuisine = ["/Images/Gallery/Cuisine/1.jpeg", "./Images/Gallery/Cuisine/2.jpeg", "./Images/Gallery/Cuisine/3.jpeg", "/Images/Gallery/Cuisine/4.jpeg", "./Images/Gallery/Cuisine/5.jpeg", "/Images/Gallery/Cuisine/6.jpeg"]
-
+const categories = ["all","destinations","Adventure","culture","cuisine"]
 function Gallery() {
   const [imgArray, setImageArray] = useState(all);
   let [activeBtn, setActiveBtn] = useState('all');
@@ -44,11 +44,7 @@ function Gallery() {
     <div className='imgGall py-2'>
       <div className='heading-text imageGallHeading col-11 ms-auto mt-2'>Image <span className='blue-underline'>Gallery.</span></div>
       <div className='d-flex justify-content-center paragraph-text imgGallBtns'>
-        <button className='btn imgGallBtn galBtn1 mx-3 py-2 activeGallBtn' name='all' onClick={handleChange}>All</button>
-        <button className='btn imgGallBtn galBtn2 mx-3 py-2' name='destinations' onClick={handleChange}>Destinations</button>
-        <button className='btn imgGallBtn galBtn3 mx-3 py-2' name='adventure' onClick={handleChange}>Adventure</button>
-        <button className='btn imgGallBtn galBtn4 mx-3 py-2' name='culture' onClick={handleChange}>Culture</button>
-        <button className='btn imgGallBtn galBtn5 mx-3 py-2' name='cuisine' onClick={handleChange}>Cuisine</button>
+        {categories.map((item,index)=><button className="btn imgGallBtn galBtn5 mx-3 py-2 text-capitalize" name={item} onClick={handleChange}>{item}</button>)}
       </div>
       <div className='galImages mx-auto'>
         <div className='row text-center'>
