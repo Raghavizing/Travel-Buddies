@@ -44,7 +44,7 @@ function Gallery() {
     <div className='imgGall py-2'>
       <div className='heading-text imageGallHeading col-11 ms-auto mt-2'>Image <span className='blue-underline'>Gallery.</span></div>
       <div className='d-flex justify-content-center paragraph-text imgGallBtns'>
-        {categories.map((item,index)=><button className="btn imgGallBtn galBtn5 mx-3 py-2 text-capitalize" name={item} onClick={handleChange}>{item}</button>)}
+        {categories.map((item,index)=><button className={`btn imgGallBtn galBtn5 mx-3 py-2 text-capitalize ${index===0?"activeGallBtn":""}`} name={item} onClick={handleChange}>{item}</button>)}
       </div>
       <div className='galImages mx-auto'>
         <div className='row text-center'>

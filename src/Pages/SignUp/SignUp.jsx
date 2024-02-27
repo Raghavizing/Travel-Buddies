@@ -1,8 +1,16 @@
 import React, { useState } from 'react'
-import "./Login.css"
-function Login() {
+import "./SignUp.css"
+function SignUp() {
     const [validation, setValidation] = useState({
+        nameVal: {
+            isValid: true,
+            message: ""
+        },
         passVal: {
+            isValid: true,
+            message: ""
+        },
+        passMatchval: {
             isValid: true,
             message: ""
         },
@@ -13,8 +21,10 @@ function Login() {
 
     })
     const [contact, updateContact] = useState({
+        name: "",
         email: "",
         pass: "",
+        repass: ""
 
     })
 
@@ -49,13 +59,44 @@ function Login() {
             })
             isValid = false;
         }
+        if (contact.name.length === 0) {
+            setValidation({
+                ...validation,
+                name: {
+                    isValid: false,
+                    message: "Field cannot be empty."
+                }
+            })
+            isValid = false;
+        }
+        if (contact.pass !== contact.repass) {
+            setValidation({
+                ...validation,
+                passMatchval: {
+                    isValid: false,
+                    message: "Passwords donot match."
+                }
+            })
+            isValid = false;
+        }
+
         if (isValid) {
             updateContact({
+                name: "",
                 email: "",
                 pass: "",
+                repass: ""
             })
             setValidation({
+                nameVal: {
+                    isValid: true,
+                    message: ""
+                },
                 passVal: {
+                    isValid: true,
+                    message: ""
+                },
+                passMatchval: {
                     isValid: true,
                     message: ""
                 },
@@ -68,10 +109,14 @@ function Login() {
         event.preventDefault();
     }
     return (
-        <div className='loginPage'>
-            <div className='col-lg-4 col-md-6 col-10 mx-auto login'>
-                <div className='heading-text text-center h3 my-4 text-capitalize'>Login</div>
-                <form className="shadow loginform mb-3">
+        <div className='signupPage'>
+            <div className='col-lg-4 col-md-6 col-10 mx-auto signup'>
+                <div className='heading-text text-center h3 my-4 text-capitalize'>Sign Up</div>
+                <form className=" shadow mb-3 signupform">
+                    <div className="mb-3">
+                        <label htmlFor="name" className="form-label d-flex justify-content-between subheading-text">Full Name <p className='validationMessage my-auto paragraph-text' hidden={validation.nameVal.isValid}>* {validation.nameVal.message}</p></label>
+                        <input name="name" type="name" className="form-control" id="name" value={contact.name} onChange={handleFormChange} />
+                    </div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label d-flex justify-content-between subheading-text">Email address <p className='validationMessage my-auto paragraph-text' hidden={validation.emailVal.isValid}>* {validation.emailVal.message}</p></label>
                         <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" value={contact.email} onChange={handleFormChange} />
@@ -81,12 +126,16 @@ function Login() {
                         <label htmlFor="pass" className="form-label d-flex justify-content-between subheading-text">Password <p className='validationMessage my-auto paragraph-text' hidden={validation.passVal.isValid}>* {validation.passVal.message}.</p></label>
                         <input name="pass" type="password" className="form-control" id="pass" value={contact.pass} onChange={handleFormChange} />
                     </div>
-                    <div className='text-center paragraph-text'><button className="btn btn-primary w-50 mt-4 text-capitalize" onClick={submitForm}>Login</button></div>
-                    <p className='text-center mt-2 paragraph-text'>Not a member? <a className="text-primary text-underline" href='/SignUp'>Sign Up</a></p>
+                    <div className="mb-3">
+                        <label htmlFor="repass" className="form-label d-flex justify-content-between subheading-text">Repeat Password <p className='validationMessage my-auto paragraph-text' hidden={validation.passMatchval.isValid}>* {validation.passMatchval.message}</p></label>
+                        <input name="repass" type="password" className="form-control" id="repass" value={contact.repass} onChange={handleFormChange} />
+                    </div>
+                    <div className='text-center'><button className="btn btn-primary w-50 mt-4 text-capitalize paragraph-text" onClick={submitForm}>Sign Up</button></div>
+                    <p className='text-center mt-2 paragraph-text'>Already have an account? <a className="text-primary text-underline" href='/Login'>Login</a></p>
                 </form>
             </div>
         </div>
     )
 }
 
-export default Login
+export default SignUp
