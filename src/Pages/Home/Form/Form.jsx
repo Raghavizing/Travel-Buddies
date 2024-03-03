@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
 const Form = () => {
     const [count, setCount] = useState(1000);
-    return (<div className="headerForm rounded-3 row col-10 mx-auto px-4 rounded-5 text-black">
+    return (<div className="headerForm bg-white rounded-3 row col-10 mx-auto px-4 rounded-5 text-black my-4">
         <form action="">
             <div className="row pt-3">
                 <div className="form-group  col-lg-4 col-md-4 col-12">

@@ -48,7 +48,3 @@
 .listing-card:hover {
     transform: scale(1.05) !important;
 }
-
-.listing-page {
-    background-color: rgba(233, 240, 255, 0.5);
-}

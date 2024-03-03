@@ -3,12 +3,9 @@
     font-size: 10px;
     display: flex;
 }
-.loginPage{
-    height: 100vh;
-    background-color: rgba(233, 240, 255, 0.5);
-}
 .login{
     padding: 5% 0%;
+    height: 100vh;
 }
 .loginform{
     padding: 15% 10%;

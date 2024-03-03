@@ -4,14 +4,9 @@
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
 }
-
 .btn-text {
     color: white;
     text-transform: uppercase;
-}
-
-.headerForm {
-    background-color: rgb(255, 255, 255, 0.7);
 }
 
 .headerForm ::placeholder {
@@ -21,8 +16,7 @@
 }
 
 .headerForm .form-control {
-    background-color: rgb(255, 255, 255, 0.5);
-    border: none;
+    border: solid black;
 }
 
 .headerForm input[type=range]::-webkit-slider-runnable-track {

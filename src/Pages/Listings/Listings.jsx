@@ -43,7 +43,7 @@ const Listing = () => {
             </div>
         )
     }
-    return (<div className="py-2 listing-page">
+    return (<div className="py-2 listing-page whiteBackground">
         <div className="listingTitle col-11 ms-auto mt-4 heading-text">Most Visited <span className="blue-underline">Destinations.</span></div>
         <div className="row d-flex justify-content-center py-2" >
             {Hotel.map(createCard)}

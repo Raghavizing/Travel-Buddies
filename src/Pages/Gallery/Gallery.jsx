@@ -3,12 +3,12 @@ import "./Gallery.css"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const all = ["./Images/Gallery/All/1.jpeg", "./Images/Gallery/All/2.jpeg", "./Images/Gallery/All/3.jpeg", "./Images/Gallery/All/4.jpeg", "./Images/Gallery/All/5.jpeg", "./Images/Gallery/All/6.jpeg"]
-const destinations = ["/Images/Gallery/Destinations/1.jpeg", "./Images/Gallery/Destinations/2.jpeg", "./Images/Gallery/Destinations/3.jpeg", "/Images/Gallery/Destinations/4.jpeg", "./Images/Gallery/Destinations/5.jpeg", "/Images/Gallery/Destinations/6.jpeg"]
-const adventure = ["/Images/Gallery/Adventure/1.jpeg", "./Images/Gallery/Adventure/2.jpeg", "./Images/Gallery/Adventure/3.jpeg", "/Images/Gallery/Adventure/4.jpeg", "./Images/Gallery/Adventure/5.jpeg", "/Images/Gallery/Adventure/6.jpeg"]
-const culture = ["/Images/Gallery/Culture/1.jpeg", "./Images/Gallery/Culture/2.jpeg", "./Images/Gallery/Culture/3.jpeg", "/Images/Gallery/Culture/4.jpeg", "./Images/Gallery/Culture/5.jpeg", "/Images/Gallery/Culture/6.jpeg"]
-const cuisine = ["/Images/Gallery/Cuisine/1.jpeg", "./Images/Gallery/Cuisine/2.jpeg", "./Images/Gallery/Cuisine/3.jpeg", "/Images/Gallery/Cuisine/4.jpeg", "./Images/Gallery/Cuisine/5.jpeg", "/Images/Gallery/Cuisine/6.jpeg"]
-const categories = ["all","destinations","Adventure","culture","cuisine"]
+const all = ["https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/33545/sunrise-phu-quoc-island-ocean.jpg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/725255/pexels-photo-725255.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?auto=compress&cs=tinysrgb&w=600"]
+const destinations = ["https://images.pexels.com/photos/4388164/pexels-photo-4388164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/4058530/pexels-photo-4058530.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/1603650/pexels-photo-1603650.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/461936/pexels-photo-461936.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=600"]
+const adventure = ["https://images.pexels.com/photos/71104/utah-mountain-biking-bike-biking-71104.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/390051/surfer-wave-sunset-the-indian-ocean-390051.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/564096/pexels-photo-564096.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/887828/pexels-photo-887828.jpeg?auto=compress&cs=tinysrgb&w=600"]
+const culture = ["https://images.pexels.com/photos/2354073/pexels-photo-2354073.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/2635390/pexels-photo-2635390.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/161401/fushimi-inari-taisha-shrine-kyoto-japan-temple-161401.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/774282/pexels-photo-774282.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/3810971/pexels-photo-3810971.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/776469/pexels-photo-776469.jpeg?auto=compress&cs=tinysrgb&w=600"]
+const cuisine = ["https://images.pexels.com/photos/2098085/pexels-photo-2098085.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/628776/pexels-photo-628776.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/461431/pexels-photo-461431.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/2205270/pexels-photo-2205270.jpeg?auto=compress&cs=tinysrgb&w=600", "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=600"]
+const categories = ["all", "destinations", "adventure", "culture", "cuisine"]
 function Gallery() {
   const [imgArray, setImageArray] = useState(all);
   let [activeBtn, setActiveBtn] = useState('all');
@@ -37,18 +37,20 @@ function Gallery() {
       case "cuisine":
         setImageArray(cuisine);
         break;
+      default:
+        setImageArray(all);
     }
   }
 
   return (
-    <div className='imgGall py-2'>
+    <div className='imgGall py-2 whiteBackground'>
       <div className='heading-text imageGallHeading col-11 ms-auto mt-2'>Image <span className='blue-underline'>Gallery.</span></div>
       <div className='d-flex justify-content-center paragraph-text imgGallBtns'>
-        {categories.map((item,index)=><button className={`btn imgGallBtn galBtn5 mx-3 py-2 text-capitalize ${index===0?"activeGallBtn":""}`} name={item} onClick={handleChange}>{item}</button>)}
+        {categories.map((item, index) => <button className={`btn imgGallBtn galBtn5 mx-3 py-2 text-capitalize ${index === 0 ? "activeGallBtn" : ""}`} name={item} onClick={handleChange}>{item}</button>)}
       </div>
       <div className='galImages mx-auto'>
         <div className='row text-center'>
-          {imgArray.map((item,index) => <div className='col-4 my-2' data-aos="fade-up" key={index}><img className="gallImg" src={item} alt="" /></div>)}
+          {imgArray.map((item, index) => <div className='col-4 my-2' data-aos="fade-up" key={index}><img className="gallImg" src={item} alt="" /></div>)}
 
         </div>
       </div>

@@ -3,10 +3,6 @@
     font-size: 10px;
     display: flex;
 }
-.signupPage{
-    height: 100vh;
-    background-color: rgba(233, 240, 255, 0.5);
-}
 .signup{
     padding: 2% 0%;
 }

@@ -1,33 +1,39 @@
 .headerContent {
-    padding: 15% 0;
+   
 }
-
-.headerBody {
-    height: 95vh;
+.headerContent1{
+    padding: 5% 0;
 }
-
 .textLine1 {
-    color: white;
+    color: black;
     font-size: 20px;
     text-transform: uppercase;
+    height: fit-content;
 }
-
+.headerImage{
+    height: 30rem;
+}
+@media screen and (max-width:992px) and (min-width:768px){
+    .headerImage{
+        height: 25rem;
+    }
+}
+@media screen and (max-width:768px) and (min-width:576px){
+    .headerImage{
+        height: 20rem;
+    }
+}
+@media screen and (max-width:576px){
+    .headerImage{
+        height: 20rem;
+    }
+}
 .textLine2 {
-    color: white;
+    color: black;
     font-size: 35px;
+    height: fit-content;
 }
 
 .typedText {
     border-bottom: 4px solid #30c7ec
-}
-
-.headerBackground {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-}
-
-.carousalImg {
-    height: 95vh;
-    width: 100%;
 }

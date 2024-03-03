@@ -1,6 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Login.css"
+import AOS from 'aos'
 function Login() {
+    useEffect(() => {
+        AOS.init();
+    }, [])
+    const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
     const [validation, setValidation] = useState({
         passVal: {
             isValid: true,
@@ -17,7 +22,19 @@ function Login() {
         pass: "",
 
     })
+    function resetValidation() {
+        setValidation({
+            passVal: {
+                isValid: true,
+                message: ""
+            },
+            emailVal: {
+                isValid: true,
+                message: ""
+            },
+        })
 
+    }
     function handleFormChange(event) {
         let name = event.target.name;
         let value = event.target.value;
@@ -28,6 +45,7 @@ function Login() {
 
     }
     function submitForm(event) {
+        resetValidation();
         let isValid = true;
         if (contact.pass.length === 0) {
             setValidation({
@@ -35,6 +53,16 @@ function Login() {
                 passVal: {
                     isValid: false,
                     message: "Field cannot be empty."
+                }
+            })
+            isValid = false;
+        }
+        else if (contact.pass.length < 8) {
+            setValidation({
+                ...validation,
+                passVal: {
+                    isValid: false,
+                    message: "Password too short."
                 }
             })
             isValid = false;
@@ -49,29 +77,30 @@ function Login() {
             })
             isValid = false;
         }
+        else if (!contact.email.match(isValidEmail)) {
+            setValidation({
+                ...validation,
+                emailVal: {
+                    isValid: false,
+                    message: "Please enter a valid email id."
+                }
+            })
+            isValid = false;
+        }
         if (isValid) {
             updateContact({
                 email: "",
                 pass: "",
             })
-            setValidation({
-                passVal: {
-                    isValid: true,
-                    message: ""
-                },
-                emailVal: {
-                    isValid: true,
-                    message: ""
-                },
-            })
+            resetValidation();
         }
         event.preventDefault();
     }
     return (
-        <div className='loginPage'>
-            <div className='col-lg-4 col-md-6 col-10 mx-auto login'>
-                <div className='heading-text text-center h3 my-4 text-capitalize'>Login</div>
+        <div className='loginPage my-auto blueBackground'>
+            <div className='col-lg-4 col-md-6 col-10 mx-auto login ' data-aos="fade-up">
                 <form className="shadow loginform mb-3">
+                    <div className='heading-text text-center h3 mb-4 text-capitalize'>Login</div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label d-flex justify-content-between subheading-text">Email address <p className='validationMessage my-auto paragraph-text' hidden={validation.emailVal.isValid}>* {validation.emailVal.message}</p></label>
                         <input name="email" type="email" className="form-control" id="email" aria-describedby="emailHelp" value={contact.email} onChange={handleFormChange} />
