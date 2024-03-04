@@ -55,3 +55,21 @@
     background-color: #26a0da;
     border-radius: 0px 0px 20px 20px;
 }
+@media screen and (max-width:768px) {
+    .footer {
+        font-size: 12px;
+    }
+    .footerBodyText {
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width:576px) {
+    .footer {
+        font-size: 10px;
+    }
+    .footerBodyText {
+        font-size: 12px;
+    }
+
+}

@@ -37,3 +37,39 @@
 .user-details2 {
     font-size: 18px;
 }
+
+@media screen and (max-width:768px) {
+    .carousel-text {
+        font-size: 16px;
+    }
+
+    .user-details1 {
+        font-size: 14px;
+    }
+
+    .user-details2 {
+        font-size: 12px;
+    }
+    .carousel-img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .carousel-text {
+        font-size: 14px;
+    }
+
+    .user-details1 {
+        font-size: 12px;
+    }
+
+    .user-details2 {
+        font-size: 10px;
+    }
+    .carousel-img {
+        height: 150px;
+        width: 150px;
+    }
+}

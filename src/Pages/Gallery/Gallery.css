@@ -13,7 +13,7 @@
     transition: ease-in 0.2s;
     background-image: linear-gradient(to right, hsl(203, 27%, 26%) 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .imgGallBtn:hover {
@@ -37,8 +37,8 @@
 }
 
 .gallImg {
-    height: 250px;
-    width: 380px;
+    width: 90%;
+    height: 90%;
     transition: ease-in 0.2s;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 20px;

@@ -10,8 +10,8 @@ import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
 function Footer() {
     return (
         <div className='footer py-4'>
-            <div className='d-flex justify-content-center footerHead py-5'>
-                <div className='mx-4'>
+            <div className='d-flex justify-content-center row footerHead py-5'>
+                <div className='col-lg-6 col-12 text-center my-lg-0 my-3'>
                     <div className='headerText1 heading-text'>
                         Keep In Touch
                     </div>
@@ -19,16 +19,16 @@ function Footer() {
                         Travel With Us
                     </div>
                 </div>
-                <div className='mx-4 my-auto'>
+                <div className='col-lg-3 col-md-4 col-6 my-auto'>
                     <input className="form-control rounded-5" type="email" placeholder='Enter Your Email.' />
                 </div>
-                <div className='mx-1 my-auto'>
+                <div className='col-lg-3 col-md-2 col-4 my-auto'>
                     <button className='btn footerBtn rounded-5'><span className='mx-1 paragraph-text'>Send</span> <FontAwesomeIcon icon={faPaperPlane} /></button>
                 </div>
             </div>
             <div className='footerBody mx-auto pt-2'>
                 <div className='row footerBodyContent'>
-                    <div className='col-6'>
+                    <div className='col-lg-6 col-12'>
                         <div className='d-flex my-2'><FontAwesomeIcon icon={faEarthAmericas} style={{ color: "#30c7ec", }} className="my-auto me-1" /><div className="brand-name heading-text">Travel.</div></div>
                         <p className='footerBodyText paragraph-text'>Embark on unforgettable adventures with us. Discover exotic destinations, create lasting memories, and let our expert guides enhance your journey. Explore the world with confidence, knowing your wanderlust is in capable hands. Your dream getaway begins here. Bon voyage!</p>
                         <div className='my-2'>
@@ -38,7 +38,7 @@ function Footer() {
                             <a href="https://www.facebook.com" className='footerLink mx-2'><FontAwesomeIcon icon={faFacebook} size='xl' /></a>
                         </div>
                     </div>
-                    <div className='col-2 my-2'>
+                    <div className='col-lg-2 col-4 my-2'>
                         <div className='listHeader mb-2 subheading-text'>Our Agency</div>
                         <ul className='footerList paragraph-text'>
                             <li>Services</li>
@@ -49,7 +49,7 @@ function Footer() {
 
                         </ul>
                     </div>
-                    <div className='col-2 my-2'>
+                    <div className='col-lg-2 col-4 my-2'>
                         <div className='listHeader mb-2 subheading-text'>Partners</div>
                         <ul className='footerList paragraph-text'>
                             <li>Booking</li>
@@ -60,7 +60,7 @@ function Footer() {
 
                         </ul>
                     </div>
-                    <div className='col-2 my-2'>
+                    <div className='col-lg-2 col-4 my-2'>
                         <div className='listHeader mb-2 subheading-text'>Last Minute</div>
                         <ul className='footerList'>
                             <li>London</li>
