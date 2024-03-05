@@ -27,7 +27,7 @@
 }
 
 .listing-card-img {
-    height: 40%;
+    height: 200px;
 }
 
 .listing-btn {
@@ -47,4 +47,14 @@
 
 .listing-card:hover {
     transform: scale(1.05) !important;
+}
+
+.amenities-list{
+    font-size: 12px;
+}
+.amenities-heading{
+    font-size: 16px;
+}
+.loadingImg{
+    height: 100px;
 }

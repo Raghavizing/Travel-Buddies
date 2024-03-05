@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
+import LoginIcon from '@mui/icons-material/Login';
 const Navbar = () => {
     return (
         <div className="nav-sticky">
@@ -36,8 +37,8 @@ const Navbar = () => {
                             <li className="nav-item mx-2">
                                 <a className="nav-link" href="/Contact">Contact</a>
                             </li> */}
-                                <li className="col-lg-2 col-12 my-lg-auto my-1">
-                                    <button className="btn navbar-btn px-3 rounded-4" ><a className="text-white" style={{ textDecoration: "none" }} href="/Login">Login</a></button>
+                                <li className="col-lg-3 col-12 my-lg-auto my-1">
+                                    <button className="btn navbar-btn px-3 rounded-4" ><a className="text-white my-auto" style={{ textDecoration: "none" }} href="/Login"><LoginIcon fontSize="x-small" className="my-auto"/> Login</a></button>
                                 </li>
                             </ul>
                         </div>

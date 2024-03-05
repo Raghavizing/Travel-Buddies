@@ -1,39 +1,58 @@
-.headerContent {
-   
+.weatherIcon {
+    height: 100px;
+    width: 100px;
 }
-.headerContent1{
-    padding: 5% 0;
+
+.weather {
+    font-size: 16px;
+    border-radius: 20px;
 }
+
+
 .textLine1 {
     color: black;
     font-size: 20px;
     text-transform: uppercase;
     height: fit-content;
 }
-.headerImage{
+
+.headerImage {
     height: 30rem;
 }
-@media screen and (max-width:992px) and (min-width:768px){
-    .headerImage{
-        height: 25rem;
-    }
-}
-@media screen and (max-width:768px) and (min-width:576px){
-    .headerImage{
-        height: 20rem;
-    }
-}
-@media screen and (max-width:576px){
-    .headerImage{
-        height: 20rem;
-    }
-}
+
 .textLine2 {
     color: black;
-    font-size: 35px;
+    font-size: 32px;
     height: fit-content;
 }
 
 .typedText {
     border-bottom: 4px solid #30c7ec
+}
+
+@media screen and (max-width:992px) and (min-width:768px) {
+    .headerImage {
+        height: 25rem;
+    }
+    .textLine2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:576px) {
+    .headerImage {
+        height: 20rem;
+    }
+    .textLine2 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .headerImage {
+        height: 20rem;
+    }
+    .textLine2 {
+        font-size: 25px;
+    }
 }

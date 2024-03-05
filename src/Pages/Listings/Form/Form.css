@@ -15,7 +15,9 @@
     opacity: 1 !important;
     /* Firefox */
 }
-
+.errorMessage{
+    font-size: 10px;
+}
 
 .headerForm input[type=range]::-webkit-slider-runnable-track {
     background: rgb(0, 0, 0, 0.1);
