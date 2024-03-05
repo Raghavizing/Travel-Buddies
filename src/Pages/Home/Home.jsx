@@ -40,21 +40,35 @@ const Home = () => {
         }
     }
     useEffect(() => {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition((position) => {
-                let { latitude, longitude } = (position.coords);
-                getWeather(latitude, longitude);
-            });
+        let permission = sessionStorage.getItem("locationPermission");
+        if(permission==='false'){return}
+        let lat = sessionStorage.getItem("latitude");
+        let long = sessionStorage.getItem("longitude");
+        if (lat && long) {
+            getWeather(lat,long);
+        }
+        else {
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition((position) => {
+                    let { latitude, longitude } = (position.coords);
+                    getWeather(latitude, longitude);
+                    sessionStorage.setItem("latitude", latitude);
+                    sessionStorage.setItem("longitude", longitude);
+                },(error)=>{
+                    sessionStorage.setItem("locationPermission", false);
+                });
+            }
         }
     }, [])
     return (<div className="blueBackground"><div className="headerBody p-3">
-        <div className="weather bg-white shadow col-2" hidden={!isWeather}>
-        <div className="d-flex" hidden={searching}>
-            <img className="weatherIcon" src={weather.icon} alt="" />
-            <div className="my-auto">
-                <p className="paragraph-text">{weather.tempC}°C / {weather.tempF}°F </p>
-                <p className="paragraph-text">{weather.text} </p>
-            </div>
+        <div className="weather bg-white shadow col-lg-2 col-4" hidden={!isWeather}>
+            <div className="d-flex" hidden={searching}>
+                <img className="weatherIcon" src={weather.icon} alt="" />
+                <div className="my-auto">
+                    <p className="paragraph-text">{weather.tempC}°C / {weather.tempF}°F </p>
+                    <p className="paragraph-text">{weather.text} </p>
+                </div>
             </div>
         </div>
         <div className="row headerContent1">

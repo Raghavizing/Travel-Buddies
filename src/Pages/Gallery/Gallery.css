@@ -8,7 +8,6 @@
 
 .imgGallBtn {
     border: 1px solid #26a0da;
-    width: 10%;
     border-radius: 20px;
     transition: ease-in 0.2s;
     background-image: linear-gradient(to right, hsl(203, 27%, 26%) 0%, #26a0da 51%, #314755 100%);

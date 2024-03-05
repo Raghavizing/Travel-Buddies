@@ -45,8 +45,8 @@ function Gallery() {
   return (
     <div className='imgGall py-2 whiteBackground'>
       <div className='heading-text imageGallHeading col-11 ms-auto mt-2'>Image <span className='blue-underline'>Gallery.</span></div>
-      <div className='d-flex justify-content-center paragraph-text imgGallBtns'>
-        {categories.map((item, index) => <button className={`btn imgGallBtn galBtn5 mx-2 text-capitalize ${index === 0 ? "activeGallBtn" : ""}`} name={item} onClick={handleChange}>{item}</button>)}
+      <div className='d-flex justify-content-center row mx-auto paragraph-text imgGallBtns'>
+        {categories.map((item, index) => <button className={`btn imgGallBtn galBtn5 mx-2 text-capitalize col-lg-1 col-3 my-lg-0 my-2 ${index === 0 ? "activeGallBtn" : ""}`} name={item} onClick={handleChange}>{item}</button>)}
       </div>
       <div className='galImages mx-auto'>
         <div className='row text-center d-flex justify-content-around'>
