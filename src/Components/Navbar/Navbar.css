@@ -7,6 +7,10 @@
     width: fit-content;
 }
 @media screen and (min-width:992px) {
+    .nav-item li {
+       width: fit-content;
+
+    }
     .nav-item a:hover {
         border-bottom: 2px solid black;
 
@@ -14,6 +18,12 @@
 
     .nav-item a:active {
         border-bottom: 2px solid black;
+    }
+}
+@media screen and (max-width:992px) {
+    .nav-item a {
+        font-size: 18px;
+    
     }
 }
 

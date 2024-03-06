@@ -113,7 +113,7 @@ function SignUp() {
         event.preventDefault();
     }
     return (
-        <div className='signupPage my-auto whiteBackground'>
+        <div className='signupPage my-auto blueBackground'>
             <div className='col-lg-4 col-md-6 col-10 mx-auto signup' data-aos='fade-up'>
                 <form className=" shadow mb-3 signupform">
                 <div className='heading-text text-center h3 mt-4 text-capitalize'>Sign Up</div>

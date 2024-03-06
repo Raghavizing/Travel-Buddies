@@ -62,7 +62,7 @@ const Home = () => {
         }
     }, [])
     return (<div className="blueBackground"><div className="headerBody p-3">
-        <div className="weather bg-white shadow col-lg-2 col-4" hidden={!isWeather}>
+        <div className="weather bg-white shadow col px-3 m-3" hidden={!isWeather}>
             <div className="d-flex" hidden={searching}>
                 <img className="weatherIcon" src={weather.icon} alt="" />
                 <div className="my-auto">
@@ -73,14 +73,14 @@ const Home = () => {
         </div>
         <div className="row headerContent1">
             <div className="row col-lg-6 col-12 text-center text-lg-start my-auto">
-                <span className="textLine1 d-block col-lg-11 ms-auto heading-text">Our Packages</span>
-                <span className="textLine2 d-block col-lg-11 ms-auto heading-text">Search Your <ReactTyped className="typedText"
+                <span className="textLine1 d-block col-lg-11 ms-lg-auto mx-auto heading-text mb-4">Search Your <ReactTyped className="typedText"
                     strings={['Perfect Destination.', 'Next Adventure.', 'Dream Getaway.', 'Travel Bliss.']}
                     typeSpeed={60} backSpeed={60} loop
                 /></span>
+                <span className="textLine2 d-block col-lg-11 col-12 ms-lg-auto mx-auto paragraph-text px-lg-0 px-5">Welcome to our travel hub! Explore captivating destinations with our expertly curated experiences. From serene beaches to bustling cities, we tailor journeys to your wanderlust. Let's turn your travel dreams into unforgettable adventures!</span>
             </div>
             <div className="col-lg-6 col-12 text-center">
-                <img className="headerImage" src="https://png.pngtree.com/png-clipart/20220123/original/pngtree-vector-hand-drawn-travel-family-vacation-travel-png-image_7164365.png" alt="" />
+                <img className="headerImage" src="/Images/home_page.png" alt="" />
             </div>
         </div>
     </div>

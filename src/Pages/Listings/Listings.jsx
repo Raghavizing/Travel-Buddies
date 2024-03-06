@@ -104,7 +104,7 @@ const Listing = () => {
             </div>
         )
     }
-    return (<div className="py-2 listing-page whiteBackground">
+    return (<div className="py-2 listing-page blueBackground">
         <div className="listingTitle col-11 ms-auto mt-4 heading-text">Search <span className="blue-underline">Hotels.</span></div>
         <Form handleChange={searchHotels} />
         <div hidden={!searching} className="text-center"><img src="https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif" alt="" className="loadingImg my-4" /></div>
