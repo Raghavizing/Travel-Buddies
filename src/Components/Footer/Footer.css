@@ -1,8 +1,10 @@
+/* General Footer Styles */
 .footer {
     background-image: url("https://images.pexels.com/photos/2707756/pexels-photo-2707756.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 20px 0;
 }
 
 .headerText1 {
@@ -21,6 +23,7 @@
     background-color: white;
     border-radius: 20px;
     width: 80%;
+    margin: 0 auto;
 }
 
 .footerBodyContent {
@@ -32,11 +35,10 @@
 }
 
 .footerLink {
-    color: black
+    color: black;
 }
 
 .footerBtn {
-
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
     color: white !important;
@@ -53,23 +55,78 @@
 
 .footerTrademark {
     background-color: #26a0da;
-    border-radius: 0px 0px 20px 20px;
+    border-radius: 0 0 20px 20px;
 }
-@media screen and (max-width:768px) {
-    .footer {
-        font-size: 12px;
-    }
-    .footerBodyText {
-        font-size: 14px;
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .headerText1 {
+        font-size: 20px;
     }
 
+    .headerText2 {
+        font-size: 22px;
+    }
+
+    .footerBody {
+        width: 90%;
+    }
 }
-@media screen and (max-width:576px) {
+
+@media screen and (max-width: 768px) {
     .footer {
+        padding: 15px 0;
+    }
+
+    .headerText1 {
+        font-size: 18px;
+    }
+
+    .headerText2 {
+        font-size: 20px;
+    }
+
+    .footerBody {
+        width: 100%;
+    }
+
+    .footerBodyText {
+        font-size: 12px;
+    }
+
+    .footerBtn {
+        width: 100%;
+    }
+
+    .footerList li {
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .headerText1 {
+        font-size: 16px;
+    }
+
+    .headerText2 {
+        font-size: 18px;
+    }
+
+    .footerBody {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .footerBodyText {
         font-size: 10px;
     }
-    .footerBodyText {
-        font-size: 12px;
+
+    .footerBtn {
+        width: 100%;
+        padding: 10px;
     }
 
+    .footerList li {
+        font-size: 12px;
+    }
 }

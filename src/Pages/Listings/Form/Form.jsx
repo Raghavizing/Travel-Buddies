@@ -43,10 +43,8 @@ const Form = (props) => {
             let departure = new Date(details.departure).getTime();
             if (arrival > departure) {
                 setDateError((e)=>!e);
-                alert(dateError);
             }
             if (!dateError) {
-                alert(dateError);
                 props.handleChange(details);
                 resetForm();
                 resetErrors();

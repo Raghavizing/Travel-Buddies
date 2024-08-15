@@ -50,10 +50,16 @@ function Gallery() {
       </div>
       <div className='galImages mx-auto'>
         <div className='row text-center d-flex justify-content-around'>
-          {imgArray.map((item, index) => <div className='col-lg-4 col-md-6 col-12 my-2 ' data-aos="fade-up" key={index}><img className="gallImg" src={item} alt="" /></div>)}
-
+          {imgArray.map((item, index) => (
+            <div className='col-lg-4 col-md-6 col-12 my-2' data-aos="fade-up" key={index}>
+              <div className='gallImgContainer'>
+                <img className="gallImg" src={item} alt="" />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
     </div>
   )
 }

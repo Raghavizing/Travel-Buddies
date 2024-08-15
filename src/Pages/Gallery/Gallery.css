@@ -1,13 +1,21 @@
-.imgGall{
-    height: 100vh;
+/* General Styles */
+.imgGall {
     padding: 5% 5% 10% 5%;
+    min-height: 100vh;
 }
+
 .imageGallHeading {
     font-size: 26px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .imgGallBtns {
     margin-top: 4%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .imgGallBtn {
@@ -17,6 +25,9 @@
     background-image: linear-gradient(to right, hsl(203, 27%, 26%) 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
     color: rgba(255, 255, 255, 0.6);
+    padding: 10px 15px;
+    text-transform: capitalize;
+    font-size: 14px;
 }
 
 .imgGallBtn:hover {
@@ -31,7 +42,6 @@
     background-size: 200% auto;
     color: white;
     transform: scale(1.1);
-
 }
 
 .galImages {
@@ -39,14 +49,64 @@
     padding-top: 2%;
 }
 
-.gallImg {
-    width: 90%;
-    height: 90%;
-    transition: ease-in 0.2s;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.gallImgContainer {
+    width: 100%;
+    padding-bottom: 75%; /* This gives an aspect ratio of 4:3 */
+    position: relative;
+    overflow: hidden;
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.gallImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distorting its aspect ratio */
+    transition: ease-in 0.2s;
 }
 
 .gallImg:hover {
     transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .gallImgContainer {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .imageGallHeading {
+        font-size: 22px;
+    }
+
+    .imgGallBtns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .imgGallBtn {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .imgGall {
+        padding: 10% 5% 15% 5%;
+    }
+
+    .imageGallHeading {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .gallImgContainer {
+        border-radius: 15px;
+    }
 }

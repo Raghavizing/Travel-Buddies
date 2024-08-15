@@ -1,13 +1,90 @@
-.validationMessage{
-    color: red;
-    font-size: 10px;
+/* General Styles */
+.signup {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2% 0;
 }
-.signup{
-    padding: 2% 0%;
-}
-.signupform{
+
+.signupform {
     padding: 10%;
     border-radius: 5px;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 100%;
+}
+
+.heading-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.validationMessage {
+    color: red;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+    .signupform {
+        padding: 8% 5%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .signupform {
+        padding: 8% 5%;
+        border-radius: 10px;
+    }
+
+    .heading-text {
+        font-size: 22px;
+    }
+
+    .btn {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .signupform {
+        padding: 8% 3%;
+        border-radius: 10px;
+    }
+
+    .heading-text {
+        font-size: 20px;
+    }
+
+    .form-label {
+        font-size: 13px;
+    }
+
+    .form-control {
+        font-size: 13px;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }

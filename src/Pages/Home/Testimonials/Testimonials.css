@@ -6,11 +6,13 @@
     border-radius: 50%;
     height: 250px;
     width: 250px;
+    object-fit: cover; /* Ensure the image scales properly */
 }
 
 .carousel-text {
     font-size: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .userCarousel {
@@ -19,7 +21,7 @@
     border-radius: 20px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: ease-in-out 0.2s;
+    transition: transform 0.2s ease-in-out;
 }
 
 .userCarousel:hover {
@@ -28,6 +30,12 @@
 
 .testimonials-header {
     font-size: 26px;
+    text-align: center; /* Center the header text */
+    margin-bottom: 40px; /* Add some space below the header */
+}
+
+.user-details1, .user-details2 {
+    text-align: center; /* Center the user details */
 }
 
 .user-details1 {
@@ -38,38 +46,52 @@
     font-size: 18px;
 }
 
+/* Medium screens (tablets, landscape phones) */
 @media screen and (max-width:768px) {
     .carousel-text {
         font-size: 16px;
     }
 
     .user-details1 {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .user-details2 {
-        font-size: 12px;
+        font-size: 14px;
     }
+    
     .carousel-img {
         height: 200px;
         width: 200px;
     }
 }
 
+/* Small screens (portrait phones) */
 @media screen and (max-width:576px) {
     .carousel-text {
         font-size: 14px;
+        margin-bottom: 15px;
     }
 
     .user-details1 {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .user-details2 {
-        font-size: 10px;
+        font-size: 12px;
     }
+    
     .carousel-img {
         height: 150px;
         width: 150px;
+    }
+
+    .testimonials-header {
+        font-size: 22px;
+    }
+
+    .userCarousel {
+        margin: 3%;
+        padding: 3%;
     }
 }

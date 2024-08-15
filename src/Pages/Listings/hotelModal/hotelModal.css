@@ -5,12 +5,19 @@
     width: 100%;
     top: 0;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto; /* Enable scrolling if content overflows */
 }
 
 .hotelModal {
     background-color: white;
     padding: 2%;
     border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20px; /* Add margin to ensure space around the modal */
 }
 
 .hotelModalBody {
@@ -19,6 +26,7 @@
 
 .hotelNameModal {
     font-size: 24px;
+    word-wrap: break-word; /* Ensure long names break to next line */
 }
 
 .hotelPriceModal {
@@ -34,4 +42,70 @@
 
 .modalText1 {
     font-size: 20px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .hotelModal {
+        max-width: 90%; /* Reduce width on medium screens */
+        padding: 3%;
+    }
+
+    .hotelModalBody {
+        padding: 4%;
+    }
+
+    .hotelNameModal {
+        font-size: 20px;
+    }
+
+    .hotelPriceModal {
+        font-size: 18px;
+    }
+
+    .modalText1 {
+        font-size: 18px;
+    }
+
+    .form-group.col-6, .form-group.col-4 {
+        width: 100%; /* Make form inputs take full width on medium screens */
+        margin-bottom: 15px; /* Add spacing between inputs */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hotelModal {
+        max-width: 95%; /* Further reduce width on small screens */
+        padding: 5%;
+    }
+
+    .hotelModalBody {
+        padding: 3%;
+    }
+
+    .hotelNameModal {
+        font-size: 18px;
+    }
+
+    .hotelPriceModal {
+        font-size: 16px;
+    }
+
+    .modalText1 {
+        font-size: 16px;
+    }
+
+    .form-group.col-6, .form-group.col-4 {
+        width: 100%; /* Ensure form inputs take full width on small screens */
+        margin-bottom: 10px;
+    }
+
+    .modalClose {
+        font-size: 20px; /* Reduce size of close button */
+    }
+
+    .btn {
+        width: 100%; /* Make the button full width on small screens */
+        font-size: 16px; /* Adjust button text size */
+    }
 }

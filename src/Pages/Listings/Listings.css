@@ -1,9 +1,11 @@
 .listingTitle {
     font-size: 26px;
+    text-align: center; /* Center the title text */
+    margin-bottom: 20px; /* Add spacing below the title */
 }
 
 .blue-underline {
-    border-bottom: 4px solid #30c7ec
+    border-bottom: 4px solid #30c7ec;
 }
 
 .listing-card-name {
@@ -14,11 +16,13 @@
 .listing-card-details {
     border-top: 1px solid darkgray;
     border-bottom: 1px solid darkgray;
+    padding: 10px 0; /* Add padding to the details section */
 }
 
 .listing-card-body {
     font-size: 16px;
     color: darkgray !important;
+    padding: 15px; /* Add padding inside the card body */
 }
 
 .listing-card-price {
@@ -28,11 +32,17 @@
 
 .listing-card-img {
     height: 200px;
+    object-fit: cover; /* Ensure the image scales properly */
 }
 
 .listing-btn {
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
+    transition: background-position 0.3s;
+}
+
+.listing-btn:hover {
+    background-position: right center; /* Smooth transition effect on hover */
 }
 
 .modalClose {
@@ -42,19 +52,96 @@
 }
 
 .listing-card {
-    transition: ease-in;
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%; /* Ensure the card does not overflow */
 }
 
 .listing-card:hover {
     transform: scale(1.05) !important;
 }
 
-.amenities-list{
+.amenities-list {
     font-size: 12px;
+    padding-left: 20px; /* Add padding to align list items properly */
 }
-.amenities-heading{
+
+.amenities-heading {
     font-size: 16px;
 }
-.loadingImg{
+
+.loadingImg {
     height: 100px;
+}
+
+/* Medium screens (tablets, landscape phones) */
+@media screen and (max-width: 768px) {
+    .listingTitle {
+        font-size: 22px;
+    }
+
+    .listing-card-name {
+        font-size: 18px;
+    }
+
+    .listing-card-price {
+        font-size: 16px;
+    }
+
+    .listing-card-img {
+        height: 180px;
+    }
+
+    .listing-card-body {
+        font-size: 14px;
+    }
+
+    .amenities-heading {
+        font-size: 14px;
+    }
+
+    .amenities-list {
+        font-size: 10px;
+    }
+}
+
+/* Small screens (portrait phones) */
+@media screen and (max-width: 576px) {
+    .listingTitle {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .listing-card {
+        width: 100%;
+        margin: 10px 0; /* Add margin for better spacing */
+    }
+
+    .listing-card-name {
+        font-size: 16px;
+    }
+
+    .listing-card-price {
+        font-size: 14px;
+    }
+
+    .listing-card-img {
+        height: 150px;
+    }
+
+    .listing-card-body {
+        font-size: 12px;
+    }
+
+    .amenities-heading {
+        font-size: 12px;
+    }
+
+    .amenities-list {
+        font-size: 10px;
+    }
+
+    .listing-btn {
+        font-size: 14px;
+        padding: 10px 15px; /* Adjust padding for buttons */
+    }
 }

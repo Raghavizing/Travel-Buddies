@@ -1,25 +1,114 @@
+/* General Styles */
+.headerForm {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    height: 45px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Button Styles */
 .Form-btn {
     position: relative;
     top: 20px;
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
+    transition: background-position 0.5s;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.Form-btn:hover {
+    background-position: right center; /* Change background position on hover */
 }
 
 .btn-text {
     color: white;
     text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.headerForm ::placeholder {
-    color: black !important;
-    opacity: 1 !important;
-    /* Firefox */
-}
-.errorMessage{
+/* Error Message Style */
+.errorMessage {
     font-size: 10px;
 }
 
+/* Placeholder Style */
+.headerForm ::placeholder {
+    color: black !important;
+    opacity: 1 !important;
+}
+
+/* Range Input Track Style */
 .headerForm input[type=range]::-webkit-slider-runnable-track {
-    background: rgb(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .headerForm {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .Form-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .btn-text {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .headerForm {
+        padding: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .form-control {
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .Form-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+        width: 100%; /* Make button full width on small screens */
+    }
+
+    .btn-text {
+        font-size: 12px;
+    }
+
+    .errorMessage {
+        font-size: 9px;
+    }
 }

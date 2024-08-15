@@ -7,48 +7,49 @@
     font-size: 16px;
     border-radius: 20px;
     width: fit-content;
-}
-
-
-.textLine2 {
-    color: black;
-    font-size: 18px;
-    height: fit-content;
-}
-
-.headerImage {
-    width: 100%;
+    margin: 0 auto; /* Center the weather component */
 }
 
 .textLine1 {
     color: black;
-    font-size: 32px;
-    height: fit-content;
+    font-size: 2vw; /* Scales with screen width */
+    max-width: 100%; /* Ensures text doesn't overflow */
+    margin-bottom: 10px;
 }
 
-.typedText {
-    border-bottom: 4px solid #30c7ec
+.textLine2 {
+    color: black;
+    font-size: 1.5vw; /* Scales with screen width */
+    max-width: 90%; /* Prevents text overflow */
+    margin: 0 auto; /* Centers the text on smaller screens */
 }
 
+.headerImage {
+    width: 100%;
+    max-width: 500px; /* Max width for larger screens */
+    height: auto;
+    margin: 0 auto; /* Centers the image */
+}
+
+/* Media Queries */
 @media screen and (max-width:1300px) and (min-width:991px) {
     .textLine1 {
-        font-size: 26px;
+        font-size: 2.5vw;
     }
     .textLine2 {
-        font-size: 16px;
+        font-size: 1.8vw;
     }
 }
 
 @media screen and (max-width:991px) and (min-width:768px) {
     .headerImage {
-        width: 75%;
+        width: 80%;
     }
     .textLine1 {
-        font-size: 30px;
+        font-size: 3vw;
     }
     .textLine2 {
-        font-size: 16px;
-        width: 75%;
+        font-size: 2vw;
     }
 }
 
@@ -57,10 +58,10 @@
         width: 75%;
     }
     .textLine1 {
-        font-size: 30px;
+        font-size: 4vw;
     }
     .textLine2 {
-        font-size: 14px;
+        font-size: 3vw;
         width: 80%;
     }
 }
@@ -70,10 +71,10 @@
         width: 75%;
     }
     .textLine1 {
-        font-size: 25px;
+        font-size: 5vw;
     }
     .textLine2 {
-        font-size: 12px;
+        font-size: 3.5vw;
         width: 85%;
     }
 }

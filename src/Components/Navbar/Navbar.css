@@ -1,30 +1,12 @@
+/* General Navbar Styles */
 .nav-item a {
     font-size: 16px;
     border-bottom: 2px solid transparent;
-
+    transition: border-bottom 0.3s ease;
 }
-.collapse{
-    width: fit-content;
-}
-@media screen and (min-width:992px) {
-    .nav-item li {
-       width: fit-content;
 
-    }
-    .nav-item a:hover {
-        border-bottom: 2px solid black;
-
-    }
-
-    .nav-item a:active {
-        border-bottom: 2px solid black;
-    }
-}
-@media screen and (max-width:992px) {
-    .nav-item a {
-        font-size: 18px;
-    
-    }
+.collapse {
+    width: 100%;
 }
 
 .nav-sticky {
@@ -32,13 +14,72 @@
     top: 0;
     background-color: white;
     z-index: 1;
+    border-bottom: 1px solid #ddd; /* Optional: Add a border for better visibility */
 }
 
 .brand-name {
     font-size: 25px;
+    font-weight: bold; /* Optional: Enhance brand name appearance */
 }
 
 .navbar-btn {
     background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100%);
     background-size: 200% auto;
+}
+
+/* Navbar Item Hover and Active State */
+.nav-item a:hover {
+    border-bottom: 2px solid black;
+}
+
+.nav-item a:active {
+    border-bottom: 2px solid black;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 992px) {
+    .navbar-nav {
+        display: flex;
+        justify-content: center; /* Center the navigation items */
+    }
+
+    .nav-item {
+        width: fit-content;
+    }
+
+    .nav-item a {
+        font-size: 16px;
+    }
+
+    .navbar-toggler {
+        display: none; /* Hide the toggler for larger screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        text-align: center; /* Center the navigation items on mobile */
+    }
+
+    .nav-item a {
+        font-size: 18px;
+    }
+
+    .navbar-toggler {
+        display: block; /* Show the toggler for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .brand-name {
+        font-size: 20px; /* Reduce brand name size for very small screens */
+    }
+
+    .nav-item a {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+
+    .navbar-btn {
+        width: 100%;
+    }
 }
